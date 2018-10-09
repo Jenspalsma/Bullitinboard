@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bulletin Board</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+<div class="container">
+	<h1>Bulletin Board</h1>
+	<a href="new" class="btn btn-primary">New message</a>
+
+	<hr>
+
+	<% if (posts.length) { %>
+		<% for(var i = 0 ; i < posts.length ; i++) { %>
+			<div class="card mb-3">
+				<div class="card-body">
+					<h5 class="card-title"><%= posts[i].title %></h5>
+					<p class="card-text"><%= posts[i].body %></p>
+				</div>
+			</div>
+		<% } %>
+	<% } else { %>
+		No messages have been posted yet.
+	<% } %>
+</div>
+</body>
+</html>

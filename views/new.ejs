@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bulletin Board</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+<div class="container">
+	<h1>Bulletin Board</h1>
+	<a href="/" class="btn btn-default">Back to messages</a>
+
+	<hr>
+
+	<form action="create" method="POST">
+	    <div class="form-group">
+	        <label for="title">Title</label>
+	        <input type="text" name="title" class="form-control" placeholder="Subject goes here">
+        </div>
+        <textarea rows="4" name="body" type="text" class="form-control" placeholder="Message goes here"></textarea>
+        <button type="submit" class="btn btn-primary mt-2">Post message</button>
+    </form>
+</div>
+</body>
+</html>
